@@ -7,7 +7,7 @@ import {
   email,
   projects,
   getRandomColor,
-} from "./data";
+} from "../data";
 
 
 
