@@ -23,7 +23,9 @@ _____| ||   _   ||       | |     | |       || | |   |
 
  
   const getRandomColor = () => {
-    const colors = ["#FF5733", "#FFC300", "#FF33EC", "#1C1C1C", "", "#333333"];
+    const colors = ["#d64161", "#FFC300", "#FF33EC", "#FF5733"];
+
+
     const randomIndex = Math.floor(Math.random() * colors.length);
     return colors[randomIndex];
   };
