@@ -87,13 +87,13 @@ function Home() {
                 className="custom-tag"
                 style={{
                   backgroundColor: getRandomColor(),
-                  marginBottom: "5px", // Add some spacing between language tags
+                  marginBottom: "5px",
                 }}
               >
                 {language.name} - {language.proficiency}
               </span>
             ))}
-          </div><section className="mt-4 box">
+          </div><section className="mt-4">
   <div className="container">
     <div className="row">
       <div className="col-md-6">
@@ -102,23 +102,18 @@ function Home() {
           You can reach out to me via email at{' '}
           <a href={`mailto:${email}`}>{email}</a>.
         </p>
-        <p>Feel free to connect with me on social media:</p>
         <ul className="list-inline social-media">
           <li className="list-inline-item">
             <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin"></i>
+              <i className="fa fa-linkedin"></i>
             </a>
           </li>
           <li className="list-inline-item">
             <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter"></i>
+              <i className="fa fa-twitter"></i>
             </a>
           </li>
-          {/* Add more social media icons and links as needed */}
-        </ul>
-      </div>
-      <div className="col-md-6">
-        {/* You can also add a contact form here if you'd like */}
+                 </ul>
       </div>
     </div>
   </div>
