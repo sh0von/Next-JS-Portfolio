@@ -15,16 +15,16 @@ function Skill({ name, percentage }) {
     marginBottom: "10px",
   };
 
-  const animationDuration = `${percentage * 0.02}s`; // Adjust the multiplier to control the animation speed
+  const animationDuration = `${percentage * 0.02}s`;
 
   const skillBarStyle = {
     width: `${percentage}%`,
     height: "100%",
     backgroundColor: getRandomColor(),
-    animation: `skillAnimation-${percentage} ${animationDuration} ease-in-out`, // Use the dynamic animation keyframe name
+    animation: `skillAnimation-${percentage} ${animationDuration} ease-in-out`,
   };
 
-  // Define the dynamic animation keyframes
+ 
   const dynamicKeyframes = `
     @keyframes skillAnimation-${percentage} {
       0% {
@@ -40,7 +40,7 @@ function Skill({ name, percentage }) {
     <div style={skillStyle}>
       <div>{name}</div>
       <div className="progress">
-        <style>{dynamicKeyframes}</style> {/* Add the dynamic keyframes */}
+        <style>{dynamicKeyframes}</style> {}
         <div
           className="progress-bar"
           role="progressbar"
