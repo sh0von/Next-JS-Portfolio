@@ -81,16 +81,19 @@ function Home() {
             <div className="col-md-6 ">
               <h2>Languages</h2>
               <div className="d-flex flex-wrap">
-                {languages.map((language, index) => (
-                  <span
-                    key={index}
-                    className="custom-tag"
-                    style={{ backgroundColor: getRandomColor() }}
-                  >
-                    {language}
-                  </span>
-                ))}
-              </div>
+            {languages.map((language, index) => (
+              <span
+                key={index}
+                className="custom-tag"
+                style={{
+                  backgroundColor: getRandomColor(),
+                  marginBottom: "5px", // Add some spacing between language tags
+                }}
+              >
+                {language.name} - {language.proficiency}
+              </span>
+            ))}
+          </div>
             </div>
           </div>
         </div>

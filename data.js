@@ -1,12 +1,14 @@
 const languages = [
-  "JavaScript",
-  "Python",
-  "C++",
-  "Java",
-  "Ruby",
-  "HTML",
-  "CSS",
+  { name: "JavaScript", proficiency: "Advanced" },
+  { name: "Python", proficiency: "Intermediate" },
+  { name: "C++", proficiency: "Intermediate" },
+  { name: "Java", proficiency: "Advanced" },
+  { name: "Ruby", proficiency: "Beginner" },
+  { name: "HTML", proficiency: "Advanced" },
+  { name: "CSS", proficiency: "Intermediate" },
 ];
+
+
 const skills = [
     { name: "Web Development", percentage: 80 },
     { name: "Penetration Testing", percentage: 70 },
