@@ -127,9 +127,9 @@ function Home() {
       </div>
       <h3 className="card-title">{achievement.name}</h3>
       <p className="card-text">
-        Position: {achievement.position}
+     {achievement.position}
       </p>
-      <p className="card-text">Date: {achievement.date}</p>
+      <p className="card-text">{achievement.date}</p>
     </div>
   </div>
 </div>

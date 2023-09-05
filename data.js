@@ -39,7 +39,6 @@ const getRandomColor = () => {
     "#d64161",
     "#6b5b95",
     "#feb236",
-    "#333333",
   ];
 
   const randomIndex = Math.floor(Math.random() * colors.length);
