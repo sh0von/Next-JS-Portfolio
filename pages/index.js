@@ -8,9 +8,23 @@ import {
   projects,
   getRandomColor,
 } from "./data";
+const getRandomColor1 = () => {
+  const colors = [
+    "#3498db",
+    "#e74c3c",
+    "#6C757D",
+    "#d64161",
+    "#6b5b95",
+    "#feb236",
+    "#333333",
+  ];
+
+  const randomIndex = Math.floor(Math.random() * colors.length);
+  return colors[randomIndex];
+};
 
 function Skill({ name, percentage }) {
-  const skillColor = getRandomColor();
+  const skillColor = getRandomColor1();
   const skillStyle = {
     padding: "5px",
     marginBottom: "10px",
