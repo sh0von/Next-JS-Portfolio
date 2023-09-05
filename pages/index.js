@@ -8,17 +8,13 @@ function Home() {
   const name = "Shovon";
   const email = "minar@duck.com";
   const asciiArt = (
-    <pre><code>{`
-_______  __   __  _______  __   __  _______  __    _ 
-|       ||  | |  ||       ||  | |  ||       ||  |  | |
-|  _____||  |_|  ||   _   ||  |_|  ||   _   ||   |_| |
-| |_____ |       ||  | |  ||       ||  | |  ||       |
-|_____  ||       ||  |_|  ||       ||  |_|  ||  _    |
-_____| ||   _   ||       | |     | |       || | |   |
-|_______||__| |__||_______|  |___|  |_______||_|  |__|
-      
-
-     `} </code>  </pre>
+    <pre>{`
+____  _     ____  _     ____  _     
+/ ___\/ \ /|/  _ \/ \ |\/  _ \/ \  /|
+|    \| |_||| / \|| | //| / \|| |\ ||
+\___ || | ||| \_/|| \// | \_/|| | \||
+\____/\_/ \|\____/\__/  \____/\_/  \|
+     `} </pre>
   );
 
  
@@ -36,20 +32,8 @@ _____| ||   _   ||       | |     | |       || | |   |
   <div className="container">
     <div className="row">
       <div className="col-md-12 ascii text-center">
-        <div className="d-md-none"> {/* Show ASCII art only on small screens */}
-          <pre className="small-font">
-            {`
- _______  __   __  _______  __   __  _______  __    _ 
-|       ||  | |  ||       ||  | |  ||       ||  |  | |
-|  _____||  |_|  ||   _   ||  |_|  ||   _   ||   |_| |
-| |_____ |       ||  | |  ||       ||  | |  ||       |
-|_____  ||       ||  |_|  ||       ||  |_|  ||  _    |
- _____| ||   _   ||       | |     | |       || | |   |
-|_______||__| |__||_______|  |___|  |_______||_|  |__|
-          `}
-          </pre>
-        </div>
-        <div className="d-none d-md-block"> {/* Hide ASCII art on small screens */}
+     
+        <div className="d-md-block"> 
           {asciiArt}
         </div>
       </div>
