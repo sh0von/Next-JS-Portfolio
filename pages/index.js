@@ -7,7 +7,6 @@ import {
   email,
   projects,
   getRandomColor,
-  colors, // Update this to use 'colors' instead of 'color'
 } from "../data";
 
 function Skill({ name, percentage }) {
@@ -16,17 +15,32 @@ function Skill({ name, percentage }) {
     marginBottom: "10px",
   };
 
+  const animationDuration = `${percentage * 0.02}s`; // Adjust the multiplier to control the animation speed
+
   const skillBarStyle = {
     width: `${percentage}%`,
     height: "100%",
     backgroundColor: getRandomColor(),
-    animation: "skillAnimation 1s ease-in-out", // Apply the animation here
+    animation: `skillAnimation-${percentage} ${animationDuration} ease-in-out`, // Use the dynamic animation keyframe name
   };
+
+  // Define the dynamic animation keyframes
+  const dynamicKeyframes = `
+    @keyframes skillAnimation-${percentage} {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: ${percentage}%;
+      }
+    }
+  `;
 
   return (
     <div style={skillStyle}>
       <div>{name}</div>
       <div className="progress">
+        <style>{dynamicKeyframes}</style> {/* Add the dynamic keyframes */}
         <div
           className="progress-bar"
           role="progressbar"
@@ -38,9 +52,10 @@ function Skill({ name, percentage }) {
           {percentage}%
         </div>
       </div>
-    </div> 
+    </div>
   );
 }
+
 function Home() {
   return (
     <Layout>
@@ -57,12 +72,12 @@ function Home() {
       <section className="mt-4 box">
         <div className="container">
           <div className="row ">
-          <div className="col-md-6">
-        <h2>Skills</h2>
-        {skills.map((skill, index) => (
-          <Skill key={index} name={skill.name} percentage={skill.percentage} />
-        ))}
-      </div>
+            <div className="col-md-6">
+              <h2>Skills</h2>
+              {skills.map((skill, index) => (
+                <Skill key={index} name={skill.name} percentage={skill.percentage} />
+              ))}
+            </div>
             <div className="col-md-6 ">
               <h2>Languages</h2>
               <div className="d-flex flex-wrap">
