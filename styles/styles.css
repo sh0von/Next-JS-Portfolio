@@ -12,6 +12,9 @@
   h1, h2, h3, h4, h5, h6 {
     color: var(--heading-color);
   }
+  .a{
+    text-decoration: none;
+  }
   .box {
     border: 1px solid #333;
     border-radius: 8px;
@@ -77,3 +80,14 @@
   .small-font {
     font-size: 14px; /* Adjust the font size as needed */
   }
+
+/* Add this CSS to your stylesheet */
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.masonry .card {
+  width: 100%;
+}

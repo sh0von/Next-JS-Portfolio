@@ -31,8 +31,13 @@ _____| ||   _   ||       | |     | |       || | |   |
   const projects = [
     {
       title: "Project 1",
-      description: "A web application for managing tasks and to-do lists. Built using React and Redux.",
-      link: "#", // Add a link to the project if available
+      description: "A web application for managing tasks and to-do liA web application for managing tasks and to-do liA web application for managing tasks and to-do liA web application for managing tasks and to-do lists. Built using React and Redux.",
+      link: "#dd", // Add a link to the project if available
+    },
+    {
+      title: "Project 2",
+      description: "An e-commerce website for selling fashion accessories. Developed using Node.js and MongoDB.",
+      link: "#aa", // Add a link to the project if available
     },
     {
       title: "Project 2",
@@ -103,28 +108,36 @@ _____| ||   _   ||       | |     | |       || | |   |
           </div>
         </div>
       </section>
+
+
+
+
       <section className="mt-4 box">
         <div className="container">
           <h2>My Portfolio</h2><br></br>
-          <div className="row">
-            {projects.map((project, index) => (
+          <div className="row masonary">
+            {projects.map((project, index) => ( 
               <div className="col-md-4 mb-4" key={index}>
-                <div className="card project-card" style={{ backgroundColor: getRandomColor() }}>
+                                   
+                                   <a href={project.link} className='a' >
+                      <div className="card project-card" style={{ backgroundColor: getRandomColor() }}>
                   <div className="card-body">
                     <h5 className="card-title">{project.title}</h5>
                     <p className="card-text">{project.description}</p>
-                    {project.link && (
-                      <a href={project.link} className="btn btn-primary">
-                        View Project
-                      </a>
-                    )}
+
+                      
                   </div>
-                </div>
+                      
+                </div></a>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+
+
+      
       <section className="mt-4">
         <div className="container">
           <h2>Contact Me</h2>    You can reach out to me via email at{' '}
