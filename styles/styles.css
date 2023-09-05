@@ -1,0 +1,91 @@
+/* Custom color palette for a vibrant theme */
+:root {
+    --heading-color: #d64161; /* Vibrant Green for Headings */
+    --primary-color: #FF5733; /* Vibrant Orange */
+    --secondary-color: #FFC300; /* Vibrant Yellow */
+    --accent-color: #FF33EC; /* Vibrant Pink */
+    --bg-color: #1C1C1C; /* Dark Background */
+    --text-color: #FFFFFF; /* White Text */
+    --card-bg-color: #333333; /* Dark Gray Cards */
+    --card-text-color: #FFFFFF; /* White Text on Cards */
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+  }
+  .box {
+    border: 1px solid var(--text-color);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .jumbotron {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 3rem;
+    border-radius: 0;
+  }
+  
+  /* Update card text color */
+  .project-card .card-text {
+    color: var(--card-text-color);
+  }
+  
+  .project-card {
+    background-color: var(--card-bg-color); /* Use the custom card background color */
+    color: var(--card-text-color); /* Use the custom card text color */
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar {
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .navbar-nav .nav-link {
+    color: var(--text-color);
+    transition: color 0.3s;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+  }
+  
+  /* Additional styling for tags and badges */
+  .custom-tag {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff; /* White text color */
+    border-radius: 4px;
+    margin-right: 5px; /* Adjust spacing between tags */
+  }
+  
+  .custom-badge {
+    font-size: 16px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    border-radius: 8px;
+    border-width: 0px;
+    color: #fff; /* Text color */
+    /* Add any additional styles you want for the badges */
+  }
+  
