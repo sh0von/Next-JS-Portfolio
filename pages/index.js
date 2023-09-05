@@ -8,6 +8,20 @@ import {
   projects,
   getRandomColor,
 } from "../data";
+// Create a data array with your CTF achievements
+const ctfAchievements = [
+  {
+    name: "CTF Competition 1",
+    position: "1st Place",
+    date: "MM/DD/YYYY",
+  },
+  {
+    name: "CTF Competition 2",
+    position: "2nd Place",
+    date: "MM/DD/YYYY",
+  },
+  // Add more CTF achievements as needed
+];
 
 function Skill({ name, percentage }) {
   const skillStyle = {
@@ -93,7 +107,61 @@ function Home() {
                 {language.name} - {language.proficiency}
               </span>
             ))}
-          </div><section className="mt-4">
+          </div>
+    
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="mt-4 box">
+  <div className="container">
+    <h2>CTF Achievements</h2>
+    <div className="row">
+      {ctfAchievements.map((achievement, index) => (
+        <div className="col-md-4 mb-4" key={index}>
+  <div className="card ctf-card" style={{ backgroundColor: getRandomColor() }}>
+    <div className="card-body">
+      <div className="ctf-icon">
+<i className="fa fa-bug"></i> 
+      </div>
+      <h3 className="card-title">{achievement.name}</h3>
+      <p className="card-text">
+        Position: {achievement.position}
+      </p>
+      <p className="card-text">Date: {achievement.date}</p>
+    </div>
+  </div>
+</div>
+
+      ))}
+    </div>
+  </div>
+</section>
+
+      <section className="mt-4 box">
+        <div className="container">
+          <h2>My Project</h2>
+          <br></br>
+          <div className="row masonary">
+            {projects.map((project, index) => (
+              <div className="col-md-4 mb-4" key={index}>
+                <a href={project.link} className="a">
+                  <div
+                    className="card project-card"
+                    style={{ backgroundColor: getRandomColor() }}
+                  >
+                    <div className="card-body">
+                      <h5 className="card-title">{project.title}</h5>
+                      <p className="card-text">{project.description}</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section><section className="mt-4">
   <div className="container">
     <div className="row">
       <div className="col-md-6">
@@ -122,35 +190,6 @@ function Home() {
     </div>
   </div>
 </section>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="mt-4 box">
-        <div className="container">
-          <h2>My Project</h2>
-          <br></br>
-          <div className="row masonary">
-            {projects.map((project, index) => (
-              <div className="col-md-4 mb-4" key={index}>
-                <a href={project.link} className="a">
-                  <div
-                    className="card project-card"
-                    style={{ backgroundColor: getRandomColor() }}
-                  >
-                    <div className="card-body">
-                      <h5 className="card-title">{project.title}</h5>
-                      <p className="card-text">{project.description}</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
     </Layout>
   );
