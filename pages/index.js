@@ -7,11 +7,10 @@ import {
   email,
   projects,
   getRandomColor,
-  colors,
 } from "./data";
 
 function Skill({ name, percentage }) {
-  const skillColor = colors();
+  const skillColor = getRandomColor();
   const skillStyle = {
     padding: "5px",
     marginBottom: "10px",
@@ -22,7 +21,6 @@ function Skill({ name, percentage }) {
     height: "100%",
     backgroundColor: skillColor,
   };
-
   return (
     <div style={skillStyle}>
       <div>{name}</div>
