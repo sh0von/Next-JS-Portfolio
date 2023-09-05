@@ -1,4 +1,4 @@
-// pages/portfolio.js
+
 import React from 'react';
 import Layout from '../components/Layout';
 
@@ -16,7 +16,7 @@ function Portfolio() {
             <h3>Project 2</h3>
             <p>Description of Project 2.</p>
           </li>
-          {/* Add more projects */}
+          {}
         </ul>
       </section>
     </Layout>

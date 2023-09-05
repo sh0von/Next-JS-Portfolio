@@ -1,4 +1,4 @@
-// pages/contact.js
+
 import React from 'react';
 import Layout from '../components/Layout';
 
@@ -11,7 +11,7 @@ function Contact() {
           You can reach out to me via email at
           <a href="mailto:your.email@example.com">your.email@example.com</a>.
         </p>
-        {/* You can also add a contact form here */}
+        {}
       </section>
     </Layout>
   );

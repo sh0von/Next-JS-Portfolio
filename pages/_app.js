@@ -1,9 +1,9 @@
 import '@/styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import '../styles/styles.css'; // Adjust the path to your CSS file
+import '../styles/styles.css';
 
-import '../styles/themes.css'; // Adjust the path to your CSS file
+import '../styles/themes.css';
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />
 }

@@ -1,9 +1,9 @@
-// pages/about.js
+
 import React from 'react';
 import Layout from '../components/Layout';
 
-// pages/about.js
-// ...
+
+
 
 function About() {
     return (
@@ -21,7 +21,7 @@ function About() {
                 </p>
               </div>
               <div className="col-md-6">
-                {/* Add an image or other content here */}
+                {}
               </div>
             </div>
           </div>
@@ -30,6 +30,6 @@ function About() {
     );
   }
   
-  // ...
+ 
   
 export default About;

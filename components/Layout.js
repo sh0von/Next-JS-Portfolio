@@ -1,4 +1,4 @@
-// components/Layout.js
+
 import React from 'react';
 
 function Layout({ children }) {
