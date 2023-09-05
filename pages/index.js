@@ -30,15 +30,31 @@ _____| ||   _   ||       | |     | |       || | |   |
   return (
     <Layout>
  
-      <section className="mt-4">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12 ascii text-center">
-              {asciiArt}
-            </div>
-          </div>
+ <section className="mt-4">
+  <div className="container">
+    <div className="row">
+      <div className="col-md-12 ascii text-center">
+        <div className="d-md-none"> {/* Show ASCII art only on small screens */}
+          <pre className="small-font">
+            {`
+ _______  __   __  _______  __   __  _______  __    _ 
+|       ||  | |  ||       ||  | |  ||       ||  |  | |
+|  _____||  |_|  ||   _   ||  |_|  ||   _   ||   |_| |
+| |_____ |       ||  | |  ||       ||  | |  ||       |
+|_____  ||       ||  |_|  ||       ||  |_|  ||  _    |
+ _____| ||   _   ||       | |     | |       || | |   |
+|_______||__| |__||_______|  |___|  |_______||_|  |__|
+          `}
+          </pre>
         </div>
-      </section>
+        <div className="d-none d-md-block"> {/* Hide ASCII art on small screens */}
+          {asciiArt}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       <section className="mt-4 box">
         <div className="container">
           <div className="row ">
