@@ -7,7 +7,6 @@ import {
   email,
   projects,
   getRandomColor,
-  colors, // Update this to use 'colors' instead of 'color'
 } from "./data";
 
 

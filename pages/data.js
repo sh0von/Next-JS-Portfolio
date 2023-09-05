@@ -78,4 +78,4 @@ const projects = [
  
 ];
 
-export { languages, skills, email, projects, asciiArt, getRandomColor,colors };
+export { languages, skills, email, projects, asciiArt, getRandomColor };
