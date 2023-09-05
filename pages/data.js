@@ -12,7 +12,6 @@ const skills = [
     { name: "Penetration Testing", percentage: 70 },
     { name: "Competitive Programming", percentage: 90 },
     { name: "Capture The Flag (CTF)", percentage: 75 },
-    // Add more skills here
   ];
 const email = "minar@duck.com";
 const asciiArt = (
@@ -79,4 +78,4 @@ const projects = [
  
 ];
 
-export { languages, skills, email, projects, asciiArt, getRandomColor };
+export { languages, skills, email, projects, asciiArt, getRandomColor,colors };

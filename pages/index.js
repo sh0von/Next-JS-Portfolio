@@ -7,11 +7,12 @@ import {
   email,
   projects,
   getRandomColor,
+  colors,
 } from "./data";
 
 function Skill({ name, percentage }) {
-  const skillColor = getRandomColor(); // Get a random color for the skill level bar
-  const skillStyle = {// Background color for the skill level bar container
+  const skillColor = colors();
+  const skillStyle = {
     padding: "5px",
     marginBottom: "10px",
   };
@@ -19,7 +20,7 @@ function Skill({ name, percentage }) {
   const skillBarStyle = {
     width: `${percentage}%`,
     height: "100%",
-    backgroundColor: skillColor, // Skill level bar color
+    backgroundColor: skillColor,
   };
 
   return (
