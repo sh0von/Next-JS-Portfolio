@@ -103,11 +103,15 @@ function Home() {
           <a href={`mailto:${email}`}>{email}</a>.
         </p>
         <ul className="list-inline social-media">
-          <li className="list-inline-item">
+              <li className="list-inline-item">
+            <a href="https://www.fb.com/yourprofile" target="_blank" rel="noopener noreferrer">
+              <i className="fa fa-facebook"></i>
+            </a>
+          </li>   <li className="list-inline-item">
             <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
               <i className="fa fa-linkedin"></i>
             </a>
-          </li>
+          </li> 
           <li className="list-inline-item">
             <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer">
               <i className="fa fa-twitter"></i>
@@ -126,7 +130,7 @@ function Home() {
 
       <section className="mt-4 box">
         <div className="container">
-          <h2>My Portfolio</h2>
+          <h2>My Project</h2>
           <br></br>
           <div className="row masonary">
             {projects.map((project, index) => (
@@ -148,13 +152,6 @@ function Home() {
         </div>
       </section>
 
-      <section className="mt-4">
-        <div className="container">
-          <h2>Contact Me</h2> You can reach out to me via email at{" "}
-          <a href={`mailto:${email}`}>{email}</a> {}
-          {}
-        </div>
-      </section>
     </Layout>
   );
 }
