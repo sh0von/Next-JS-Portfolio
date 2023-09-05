@@ -13,7 +13,7 @@
     color: var(--heading-color);
   }
   .box {
-    border: 1px solid var(--text-color);
+    border: 1px solid #333;
     border-radius: 8px;
     margin-bottom: 10px;
     padding: 10px;

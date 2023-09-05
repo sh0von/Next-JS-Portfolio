@@ -22,12 +22,36 @@ _____| ||   _   ||       | |     | |       || | |   |
 
  
   const getRandomColor = () => {
-    const colors = ["#d64161", "#FFC300", "#FF33EC", "#FF5733"];
-
+    const colors = ["#3498db", "#e74c3c", "#6C757D", "#d64161", "#6b5b95", "#feb236", "#333333"];
 
     const randomIndex = Math.floor(Math.random() * colors.length);
     return colors[randomIndex];
   };
+  
+  const projects = [
+    {
+      title: "Project 1",
+      description: "A web application for managing tasks and to-do lists. Built using React and Redux.",
+      link: "#", // Add a link to the project if available
+    },
+    {
+      title: "Project 2",
+      description: "An e-commerce website for selling fashion accessories. Developed using Node.js and MongoDB.",
+      link: "#", // Add a link to the project if available
+    },
+    {
+      title: "Project 2",
+      description: "An e-commerce website for selling fashion accessories. Developed using Node.js and MongoDB.",
+      link: "#", // Add a link to the project if available
+    },
+    {
+      title: "Project 2",
+      description: "An e-commerce website for selling fashion accessories. Developed using Node.js and MongoDB.",
+      link: "#", // Add a link to the project if available
+    },
+    // Add more projects here
+  ];
+
   return (
     <Layout>
  
@@ -79,28 +103,25 @@ _____| ||   _   ||       | |     | |       || | |   |
           </div>
         </div>
       </section>
-
       <section className="mt-4 box">
-        <div className="container ">
+        <div className="container">
           <h2>My Portfolio</h2><br></br>
           <div className="row">
-            <div className="col-md-4 mb-4">
-              <div className="card project-card">
-                <div className="card-body">
-                  <h5 className="card-title">Project 1</h5>
-                  <p className="card-text">Description of Project 1.</p>
+            {projects.map((project, index) => (
+              <div className="col-md-4 mb-4" key={index}>
+                <div className="card project-card" style={{ backgroundColor: getRandomColor() }}>
+                  <div className="card-body">
+                    <h5 className="card-title">{project.title}</h5>
+                    <p className="card-text">{project.description}</p>
+                    {project.link && (
+                      <a href={project.link} className="btn btn-primary">
+                        View Project
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="col-md-4 mb-4">
-              <div className="card project-card">
-                <div className="card-body">
-                  <h5 className="card-title">Project 2</h5>
-                  <p className="card-text">Description of Project 2.</p>
-                </div>
-              </div>
-            </div>
-            {}
+            ))}
           </div>
         </div>
       </section>
