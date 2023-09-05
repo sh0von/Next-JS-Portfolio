@@ -7,6 +7,17 @@ function Home() {
   const skills = ["Web Development", "Penetration Testing", "Competitive Programming", "Capture The Flag (CTF)"]; // Updated your skills here
   const name = "Shovon"; // Updated your name
   const email = "minar@duck.com"; // Updated your email
+  const asciiArt = (
+    <pre>
+      _______  __   __  _______  __   __  _______  __    _ 
+     |       ||  | |  ||       ||  | |  ||       ||  |  | |
+     |  _____||  |_|  ||   _   ||  |_|  ||   _   ||   |_| |
+     | |_____ |       ||  | |  ||       ||  | |  ||       |
+     |_____  ||       ||  |_|  ||       ||  |_|  ||  _    |
+      _____| ||   _   ||       | |     | |       || | |   |
+     |_______||__| |__||_______|  |___|  |_______||_|  |__|
+    </pre>
+  );
 
   // Function to generate a random background color
   const getRandomColor = () => {
@@ -35,7 +46,15 @@ function Home() {
           </div>
         </div>
       </section>
-
+      <section className="mt-4">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              {asciiArt}
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="mt-4 box">
         <div className="container">
           <div className="row ">
