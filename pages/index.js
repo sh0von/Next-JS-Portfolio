@@ -10,9 +10,7 @@ import {
   colors, // Update this to use 'colors' instead of 'color'
 } from "../data";
 
-
 function Skill({ name, percentage }) {
-  const skillColor = getRandomColor();
   const skillStyle = {
     padding: "5px",
     marginBottom: "10px",
@@ -21,8 +19,10 @@ function Skill({ name, percentage }) {
   const skillBarStyle = {
     width: `${percentage}%`,
     height: "100%",
-    backgroundColor: skillColor,
+    backgroundColor: getRandomColor(),
+    animation: "skillAnimation 1s ease-in-out", // Apply the animation here
   };
+
   return (
     <div style={skillStyle}>
       <div>{name}</div>
@@ -38,7 +38,7 @@ function Skill({ name, percentage }) {
           {percentage}%
         </div>
       </div>
-    </div>
+    </div> 
   );
 }
 function Home() {

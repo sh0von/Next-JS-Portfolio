@@ -91,3 +91,11 @@
 .masonry .card {
   width: 100%;
 }
+@keyframes skillAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
