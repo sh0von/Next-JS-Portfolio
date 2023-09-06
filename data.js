@@ -58,7 +58,7 @@ const projects = [
     title: "Minimal Portfolio",
     description:
       "A minimal portfolio template, developed using Next.js",
-    link: "https://github.com/sh0von/shovon",
+    link: "http://sh0von.me/",
   },
   {
     title: "Daily Sparks",
