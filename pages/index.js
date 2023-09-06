@@ -7,7 +7,8 @@ import {
   email,
   projects,
   getRandomColor,
-  ctfAchievements
+  ctfAchievements,
+  socialMedia,
 } from "../data";
 
 
@@ -149,35 +150,29 @@ function Home() {
             ))}
           </div>
         </div>
-      </section><section className="mt-4">
-  <div className="container">
-    <div className="row">
-      <div className="col-md-6">
-        <h2>Contact Me</h2>
-        <p>
-          You can reach out to me via email at{' '}
-          <a href={`mailto:${email}`}>{email}</a>.
-        </p>
-        <ul className="list-inline social-media">
-              <li className="list-inline-item">
-            <a href="https://www.fb.com/yourprofile" target="_blank" rel="noopener noreferrer">
-              <i className="fa fa-facebook"></i>
-            </a>
-          </li>   <li className="list-inline-item">
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
-              <i className="fa fa-linkedin"></i>
-            </a>
-          </li> 
-          <li className="list-inline-item">
-            <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer">
-              <i className="fa fa-twitter"></i>
-            </a>
-          </li>
-                 </ul>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>  
+      <section className="mt-4">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <h2>Contact Me</h2>
+              <p>
+                You can reach out to me via email at{' '}
+                <a href={`mailto:${email}`}>{email}</a>.
+              </p>
+              <ul className="list-inline social-media">
+                {socialMedia.map((profile, index) => (
+                  <li className="list-inline-item" key={index}>
+                    <a href={profile.url} target="_blank" rel="noopener noreferrer">
+                      <i className={profile.iconClass} style={{ color: profile.color }}></i>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </Layout>
   );

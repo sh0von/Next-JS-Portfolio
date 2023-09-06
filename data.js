@@ -91,4 +91,28 @@ const ctfAchievements = [
   },
  
 ];
-export { languages, skills, email, projects, asciiArt, getRandomColor,ctfAchievements };
+
+
+const socialMedia = [
+  {
+    name: "Facebook",
+    url: "https://www.facebook.com/yourprofile",
+    iconClass: "fa fa-facebook",
+    color: getRandomColor(), // Add a random color
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/yourprofile",
+    iconClass: "fa fa-linkedin",
+    color: getRandomColor(), // Add a random color
+  },
+  {
+    name: "Twitter",
+    url: "https://twitter.com/yourhandle",
+    iconClass: "fa fa-twitter",
+    color: getRandomColor(), // Add a random color
+  },
+  // Add more social media links as needed
+];
+
+export { languages, skills, email, projects, asciiArt, getRandomColor,ctfAchievements ,socialMedia};
