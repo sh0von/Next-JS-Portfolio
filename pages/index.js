@@ -9,9 +9,8 @@ import {
   getRandomColor,
   ctfAchievements,
   socialMedia,
-  getRandomGradientColor
+  getRandomGradientColor,
 } from "../data";
-
 
 function Skill({ name, percentage }) {
   const skillStyle = {
@@ -24,11 +23,10 @@ function Skill({ name, percentage }) {
   const skillBarStyle = {
     width: `${percentage}%`,
     height: "100%",
-    background: getRandomGradientColor(), // Use getRandomGradientColor here.
+    background: getRandomGradientColor(),
     animation: `skillAnimation-${percentage} ${animationDuration} ease-in-out`,
   };
-  
- 
+
   const dynamicKeyframes = `
     @keyframes skillAnimation-${percentage} {
       0% {
@@ -79,58 +77,60 @@ function Home() {
             <div className="col-md-6">
               <h2>Skills</h2>
               {skills.map((skill, index) => (
-                <Skill key={index} name={skill.name} percentage={skill.percentage} />
+                <Skill
+                  key={index}
+                  name={skill.name}
+                  percentage={skill.percentage}
+                />
               ))}
             </div>
             <div className="col-md-6 ">
               <h2>Languages</h2>
               <div className="d-flex flex-wrap">
-            {languages.map((language, index) => (
-              <span
-                key={index}
-                className="custom-tag"
-                style={{
-                  backgroundColor: getRandomColor(),
-                  marginBottom: "5px",
-                }}
-              >
-                {language.name} - {language.proficiency}
-              </span>
-            ))}
-          </div>
-    
-
+                {languages.map((language, index) => (
+                  <span
+                    key={index}
+                    className="custom-tag"
+                    style={{
+                      background: getRandomGradientColor(),
+                      marginBottom: "5px",
+                    }}
+                  >
+                    {language.name} - {language.proficiency}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section className="mt-4 box ">
-  <div className="container scale-up">
-    <h2>CTF Achievements</h2>
-    <div className="row">
-      {ctfAchievements.map((achievement, index) => (
-        <div className="col-md-4 mb-4" key={index}>
-  <div className="card ctf-card"  style={{
-                      background: getRandomGradientColor(), // Apply gradient background here.
-                       // Set text color to contrast with the gradient.
-                    }}>
-    <div className="card-body">
-      <div className="ctf-icon">
-<i className="fa fa-bug"></i> 
-      </div>
-      <h3 className="card-title">{achievement.name}</h3>
-      <p className="card-text">
-     {achievement.position}
-      </p>
-      <p className="card-text">{achievement.date}</p>
-    </div>
-  </div>
-</div>
-
-      ))}
-    </div>
-  </div>
-</section>
+        <div className="container scale-up">
+          <h2>CTF Achievements</h2>
+          <div className="row">
+            {ctfAchievements.map((achievement, index) => (
+              <div className="col-md-4 mb-4" key={index}>
+                <div
+                  className="card ctf-card"
+                  style={{
+                    background: getRandomGradientColor(),
+                    color:"#fff"
+                  }}
+                >
+                  <div className="card-body">
+                    <div className="ctf-icon">
+                      <i className="fa fa-bug"></i>
+                    </div>
+                    <h3 className="card-title">{achievement.name}</h3>
+                    <p className="card-text">{achievement.position}</p>
+                    <p className="card-text">{achievement.date}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="mt-4 box">
         <div className="container">
@@ -141,9 +141,9 @@ function Home() {
               <div className="col-md-4 mb-4 slide " key={index}>
                 <a href={project.link} className="a">
                   <div
-                    className="card project-card"  style={{
-                      background: getRandomGradientColor(), // Apply gradient background here.
-                       // Set text color to contrast with the gradient.
+                    className="card project-card"
+                    style={{
+                      background: getRandomGradientColor(),
                     }}
                   >
                     <div className="card-body">
@@ -156,21 +156,28 @@ function Home() {
             ))}
           </div>
         </div>
-      </section>  
+      </section>
       <section className="mt-4 ">
         <div className="container ">
           <div className="row">
             <div className="col-md-6  ">
               <h2>Contact Me</h2>
               <p>
-                You can reach out to me via email at{' '}
+                You can reach out to me via email at{" "}
                 <a href={`mailto:${email}`}>{email}</a>.
               </p>
               <ul className="list-inline social-media">
                 {socialMedia.map((profile, index) => (
                   <li className="list-inline-item" key={index}>
-                    <a href={profile.url} target="_blank" rel="noopener noreferrer">
-                      <i className={profile.iconClass} style={{ color: profile.color }}></i>
+                    <a
+                      href={profile.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i
+                        className={profile.iconClass}
+                        style={{ color: profile.color }}
+                      ></i>
                     </a>
                   </li>
                 ))}
@@ -179,7 +186,6 @@ function Home() {
           </div>
         </div>
       </section>
-
     </Layout>
   );
 }
