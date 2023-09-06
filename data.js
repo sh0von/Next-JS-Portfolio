@@ -1,19 +1,18 @@
 const languages = [
-  { name: "JavaScript", proficiency: "Advanced" },
-  { name: "Python", proficiency: "Intermediate" },
-  { name: "C++", proficiency: "Intermediate" },
-  { name: "Java", proficiency: "Advanced" },
-  { name: "Ruby", proficiency: "Beginner" },
+  { name: "Python", proficiency: "Advanced" },
+  { name: "C++", proficiency: "Beginner" },
+  { name: "JavaScript", proficiency: "Intermediate" },
+  { name: "PHP", proficiency: "Advanced" },
   { name: "HTML", proficiency: "Advanced" },
-  { name: "CSS", proficiency: "Intermediate" },
+  { name: "CSS", proficiency: "Advanced" },
 ];
 
 
 const skills = [
     { name: "Web Development", percentage: 80 },
     { name: "Penetration Testing", percentage: 70 },
-    { name: "Competitive Programming", percentage: 90 },
-    { name: "Capture The Flag (CTF)", percentage: 75 },
+    { name: "Competitive Programming", percentage: 30 },
+    { name: "Math Olympiad", percentage: 74 },
   ];
 const email = "minar@duck.com";
 const asciiArt = (
@@ -47,47 +46,61 @@ const getRandomColor = () => {
 
 const projects = [
   {
-    title: "Project 1",
+    title: "Minimal Portfolio",
     description:
-      "A web application for managing tasks and to-do liA web application for managing tasks and to-do liA web application for managing tasks and to-do liA web application for managing tasks and to-do lists. Built using React and Redux.",
-    link: "#dd",
+      "A minimal portfolio template, developed using Next.js",
+    link: "https://github.com/sh0von/shovon",
   },
   {
-    title: "Project 2",
+    title: "Daily Sparks",
     description:
-      "An e-commerce website for selling fashion accessories. Developed using Node.js and MongoDB.",
-    link: "#aa",
+      "A web app which show unique idea in daily basis , develped using Next.js",
+    link: "https://github.com/sh0von/dailysparks",
   },
   {
-    title: "Project 2",
+    title: "WRE Materials (CUET)",
     description:
-      "An e-commerce website for selling fashion accessories. Developed using Node.js and MongoDB.",
+      "A web app which contains all the materials of Water Resources Engineering Department of CUET, developed using Next.js",
+    link: "https://github.com/sh0von/cuetwre",
+  },
+  {
+    title: "Tuition Management System",
+    description:
+      "A web app for managing tuition center, developed using Flask and MongoDB.",
     link: "#",
   },
   {
-    title: "Project 2",
+    title: "Hydro Vapor Lang",
     description:
-      "An e-commerce website for selling fashion accessories. Developed using Node.js and MongoDB.",
-    link: "#",
+      "A basic programming language idea which is developed using Python and interpret using Flask web.",
+    link: "https://github.com/sh0von/HydroVapour",
   },
   {
-    title: "Project 2",
+    title: "Codeforces Solution",
     description:
-      "An e-commerce website for selling fashion accessories. Developed using Node.js and MongoDB.",
-    link: "#",
+      "All list of my solved problem in CF",
+    link: "https://github.com/sh0von/codeforces-solution-in-python",
   },
- 
+  {
+    title: "Wolfram Alpha Messenger Bot",
+    description:
+      "A messenger bot which can solve math problem and show wolfram alpha result.",
+    link: "https://github.com/sh0von/WolframAlpha-Messenger-Bot",
+  },
+  
 ];
 const ctfAchievements = [
   {
-    name: "CTF Competition 1",
-    position: "1st Place",
-    date: "MM/DD/YYYY",
+    name: "Antarjal Maze CTF",
+    position: "42 th",
   },
   {
-    name: "CTF Competition 2",
-    position: "2nd Place",
-    date: "MM/DD/YYYY",
+    name: "BUET CSE Fest 2023",
+    position: "70 th",
+  },
+  {
+    name: "KingSquad CTF 2023",
+    position: "374 th",
   },
  
 ];
@@ -96,23 +109,23 @@ const ctfAchievements = [
 const socialMedia = [
   {
     name: "Facebook",
-    url: "https://www.facebook.com/yourprofile",
+    url: "https://www.facebook.com/minar.svn",
     iconClass: "fa fa-facebook",
-    color: getRandomColor(), // Add a random color
+    color: getRandomColor(),
   },
   {
-    name: "LinkedIn",
-    url: "https://www.linkedin.com/in/yourprofile",
-    iconClass: "fa fa-linkedin",
-    color: getRandomColor(), // Add a random color
+    name: "Gthub",
+    url: "https://github.com/sh0von",
+    iconClass: "fa fa-github",
+    color: getRandomColor(),
   },
   {
     name: "Twitter",
     url: "https://twitter.com/yourhandle",
     iconClass: "fa fa-twitter",
-    color: getRandomColor(), // Add a random color
+    color: getRandomColor(),
   },
-  // Add more social media links as needed
+ 
 ];
 
 export { languages, skills, email, projects, asciiArt, getRandomColor,ctfAchievements ,socialMedia};
