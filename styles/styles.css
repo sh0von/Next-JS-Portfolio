@@ -50,7 +50,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   .ascii{
-    color: var(--primary-color);
+    color: #bbb;
     font-size:10px
 
   }
