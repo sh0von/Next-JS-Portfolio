@@ -49,6 +49,15 @@
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+  /* Inside Home.module.css or your CSS file */
+.external-link-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px; /* Adjust the padding as needed */
+  color: #fff; /* Change the color as desired */
+}
+
   .ascii{
     color: #bbb;
     font-size:10px

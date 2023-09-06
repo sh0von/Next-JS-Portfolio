@@ -137,23 +137,29 @@ function Home() {
           <h2 className="section-heading">My Project</h2>
           <br></br>
           <div className="row masonary">
-            {projects.map((project, index) => (
-              <div className="col-md-4 mb-4 slide " key={index}>
-                <a href={project.link} className="a"  target="_blank" rel="noopener noreferrer">
-                  <div
-                    className="card project-card"
-                    style={{
-                      background: getRandomGradientColor(),
-                    }}
-                  >
-                    <div className="card-body">
-                      <h5 className="card-title">{project.title}</h5>
-                      <p className="card-text">{project.description}</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            ))}
+          {projects.map((project, index) => (
+  <div className="col-md-4 mb-4 slide " key={index}>
+    <a href={project.link} className="a" target="_blank" rel="noopener noreferrer">
+      <div
+        className="card project-card"
+        style={{
+          background: getRandomGradientColor(),
+        }}
+      >
+        <div className="card-body">
+          <h5 className="card-title">
+            {project.title}
+            <span className="external-link-icon">
+              <i className="fa fa-link" ></i>
+            </span>
+          </h5>
+          <p className="card-text">{project.description}</p>
+        </div>
+      </div>
+    </a>
+  </div>
+))}
+
           </div>
         </div>
       </section>
