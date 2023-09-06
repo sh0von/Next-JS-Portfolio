@@ -43,15 +43,15 @@ const getRandomColor = () => {
   const randomIndex = Math.floor(Math.random() * colors.length);
   return colors[randomIndex];
 };
-
 const getRandomGradientColor = () => {
   const startColor = getRandomColor();
   const endColor = getRandomColor();
 
-  const gradientDirection = Math.random() < 0.5 ? 'to right' : 'to bottom'; // You can change the gradient direction as needed.
+  const gradientAngle = `${Math.floor(Math.random() * 360)}deg`;
 
-  return `linear-gradient(${gradientDirection}, ${startColor}, ${endColor})`;
+  return `linear-gradient(${gradientAngle}, ${startColor}, ${endColor})`;
 };
+
 
 const projects = [
   {

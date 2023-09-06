@@ -139,7 +139,7 @@ function Home() {
           <div className="row masonary">
             {projects.map((project, index) => (
               <div className="col-md-4 mb-4 slide " key={index}>
-                <a href={project.link} className="a">
+                <a href={project.link} className="a"  target="_blank" rel="noopener noreferrer">
                   <div
                     className="card project-card"
                     style={{
