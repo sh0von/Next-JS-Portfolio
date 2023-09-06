@@ -78,5 +78,17 @@ const projects = [
   },
  
 ];
-
-export { languages, skills, email, projects, asciiArt, getRandomColor };
+const ctfAchievements = [
+  {
+    name: "CTF Competition 1",
+    position: "1st Place",
+    date: "MM/DD/YYYY",
+  },
+  {
+    name: "CTF Competition 2",
+    position: "2nd Place",
+    date: "MM/DD/YYYY",
+  },
+ 
+];
+export { languages, skills, email, projects, asciiArt, getRandomColor,ctfAchievements };

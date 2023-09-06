@@ -77,10 +77,10 @@
     
   }
   .small-font {
-    font-size: 14px; /* Adjust the font size as needed */
+    font-size: 14px; 
   }
 
-/* Add this CSS to your stylesheet */
+
 .masonry {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -92,7 +92,7 @@
 }
 
 :root {
-  --animation-duration: 2s; /* Default animation duration */
+  --animation-duration: 2s; 
 }
 .language-badge {
   display: flex;
@@ -113,20 +113,20 @@
 }
 
 .language-beginner {
-  background-color: #f39c12; /* Orange for beginners */
+  background-color: #f39c12; 
   color: #fff;
 }
 
 .language-intermediate {
-  background-color: #3498db; /* Blue for intermediate */
+  background-color: #3498db; 
   color: #fff;
 }
 
 .language-advanced {
-  background-color: #27ae60; /* Green for advanced */
+  background-color: #27ae60; 
   color: #fff;
 }
-/* Add these styles to your CSS file */
+
 .ctf-card {
   border: 2px solid #fff;
   border-radius: 10px;
@@ -138,7 +138,7 @@
 .ctf-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: #fff; /* Change the background color on hover */
+  background-color: #fff; 
 }
 
 .ctf-icon {
@@ -156,4 +156,76 @@
   font-size: 16px;
 }
 
-/* Adjust these styles to match your preferred design */
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+.fadein {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.slide {
+  animation: slideInFromLeft 1s ease-in-out;
+}
+
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.bounce {
+  animation: bounce 2s ease-out;
+}
+@keyframes scaleUp {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.scale-up {
+  animation: scaleUp 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 1s ease-in-out;
+}

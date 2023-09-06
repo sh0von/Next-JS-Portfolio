@@ -7,21 +7,9 @@ import {
   email,
   projects,
   getRandomColor,
+  ctfAchievements
 } from "../data";
-// Create a data array with your CTF achievements
-const ctfAchievements = [
-  {
-    name: "CTF Competition 1",
-    position: "1st Place",
-    date: "MM/DD/YYYY",
-  },
-  {
-    name: "CTF Competition 2",
-    position: "2nd Place",
-    date: "MM/DD/YYYY",
-  },
-  // Add more CTF achievements as needed
-];
+
 
 function Skill({ name, percentage }) {
   const skillStyle = {
@@ -73,7 +61,7 @@ function Skill({ name, percentage }) {
 function Home() {
   return (
     <Layout>
-      <section className="mt-4">
+      <section className="mt-4 fadein">
         <div className="container">
           <div className="row">
             <div className="col-md-12 ascii text-center">
@@ -83,7 +71,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="mt-4 box">
+      <section className="mt-4 box bounce">
         <div className="container">
           <div className="row ">
             <div className="col-md-6">
@@ -114,8 +102,8 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="mt-4 box">
-  <div className="container">
+      <section className="mt-4 box ">
+  <div className="container scale-up">
     <h2>CTF Achievements</h2>
     <div className="row">
       {ctfAchievements.map((achievement, index) => (
@@ -145,7 +133,7 @@ function Home() {
           <br></br>
           <div className="row masonary">
             {projects.map((project, index) => (
-              <div className="col-md-4 mb-4" key={index}>
+              <div className="col-md-4 mb-4 slide " key={index}>
                 <a href={project.link} className="a">
                   <div
                     className="card project-card"
