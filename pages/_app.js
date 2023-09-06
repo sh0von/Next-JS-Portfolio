@@ -4,7 +4,7 @@ import "font-awesome/css/font-awesome.css";
 
 import "../styles/styles.css";
 
-import "../styles/themes.css";
+import "../styles/animation.css";
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
