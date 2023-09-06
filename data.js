@@ -44,6 +44,15 @@ const getRandomColor = () => {
   return colors[randomIndex];
 };
 
+const getRandomGradientColor = () => {
+  const startColor = getRandomColor();
+  const endColor = getRandomColor();
+
+  const gradientDirection = Math.random() < 0.5 ? 'to right' : 'to bottom'; // You can change the gradient direction as needed.
+
+  return `linear-gradient(${gradientDirection}, ${startColor}, ${endColor})`;
+};
+
 const projects = [
   {
     title: "Minimal Portfolio",
@@ -86,6 +95,7 @@ const projects = [
     description:
       "A messenger bot which can solve math problem and show wolfram alpha result.",
     link: "https://github.com/sh0von/WolframAlpha-Messenger-Bot",
+    
   },
   
 ];
@@ -128,4 +138,4 @@ const socialMedia = [
  
 ];
 
-export { languages, skills, email, projects, asciiArt, getRandomColor,ctfAchievements ,socialMedia};
+export { languages, skills, email, projects, asciiArt, getRandomColor,ctfAchievements ,socialMedia,getRandomGradientColor};

@@ -9,6 +9,7 @@ import {
   getRandomColor,
   ctfAchievements,
   socialMedia,
+  getRandomGradientColor
 } from "../data";
 
 
@@ -23,10 +24,10 @@ function Skill({ name, percentage }) {
   const skillBarStyle = {
     width: `${percentage}%`,
     height: "100%",
-    backgroundColor: getRandomColor(),
+    background: getRandomGradientColor(), // Use getRandomGradientColor here.
     animation: `skillAnimation-${percentage} ${animationDuration} ease-in-out`,
   };
-
+  
  
   const dynamicKeyframes = `
     @keyframes skillAnimation-${percentage} {
@@ -109,7 +110,10 @@ function Home() {
     <div className="row">
       {ctfAchievements.map((achievement, index) => (
         <div className="col-md-4 mb-4" key={index}>
-  <div className="card ctf-card" style={{ backgroundColor: getRandomColor() }}>
+  <div className="card ctf-card"  style={{
+                      background: getRandomGradientColor(), // Apply gradient background here.
+                       // Set text color to contrast with the gradient.
+                    }}>
     <div className="card-body">
       <div className="ctf-icon">
 <i className="fa fa-bug"></i> 
@@ -137,8 +141,10 @@ function Home() {
               <div className="col-md-4 mb-4 slide " key={index}>
                 <a href={project.link} className="a">
                   <div
-                    className="card project-card"
-                    style={{ backgroundColor: getRandomColor() }}
+                    className="card project-card"  style={{
+                      background: getRandomGradientColor(), // Apply gradient background here.
+                       // Set text color to contrast with the gradient.
+                    }}
                   >
                     <div className="card-body">
                       <h5 className="card-title">{project.title}</h5>
@@ -151,10 +157,10 @@ function Home() {
           </div>
         </div>
       </section>  
-      <section className="mt-4">
-        <div className="container">
+      <section className="mt-4 ">
+        <div className="container ">
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6  ">
               <h2>Contact Me</h2>
               <p>
                 You can reach out to me via email at{' '}
