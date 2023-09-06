@@ -75,7 +75,7 @@ function Home() {
         <div className="container">
           <div className="row ">
             <div className="col-md-6">
-              <h2>Skills</h2>
+              <h2 className="section-heading">Skills</h2>
               {skills.map((skill, index) => (
                 <Skill
                   key={index}
@@ -85,7 +85,7 @@ function Home() {
               ))}
             </div>
             <div className="col-md-6 ">
-              <h2>Languages</h2>
+              <h2 className="section-heading">Languages</h2>
               <div className="d-flex flex-wrap">
                 {languages.map((language, index) => (
                   <span
@@ -106,7 +106,7 @@ function Home() {
       </section>
       <section className="mt-4 box ">
         <div className="container scale-up">
-          <h2>CTF Achievements</h2>
+          <h2 className="section-heading">CTF Achievements</h2>
           <div className="row">
             {ctfAchievements.map((achievement, index) => (
               <div className="col-md-4 mb-4" key={index}>
@@ -134,7 +134,7 @@ function Home() {
 
       <section className="mt-4 box">
         <div className="container">
-          <h2>My Project</h2>
+          <h2 className="section-heading">My Project</h2>
           <br></br>
           <div className="row masonary">
             {projects.map((project, index) => (
@@ -161,7 +161,7 @@ function Home() {
         <div className="container ">
           <div className="row">
             <div className="col-md-6  ">
-              <h2>Contact Me</h2>
+              <h2 className="section-heading">Contact Me</h2>
               <p>
                 You can reach out to me via email at{" "}
                 <a href={`mailto:${email}`}>{email}</a>.
