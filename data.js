@@ -32,12 +32,13 @@ _____| ||   _   ||       | |     | |       || | |   |
 
 const getRandomColor = () => {
   const colors = [
-    "#3498db",
-    "#e74c3c",
-    "#d64161",
-    "#6b5b95",
-    "#feb236",
-  ];
+    "#3498db",  // Blue
+    "#2980b9",  // A darker shade of blue
+    "#1a5276",  // A deeper blue
+    "#154360",  // A very dark blue
+    "#9fd3c7",  // A light blue
+];
+
 
   const randomIndex = Math.floor(Math.random() * colors.length);
   return colors[randomIndex];
