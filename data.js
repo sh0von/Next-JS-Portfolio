@@ -32,12 +32,13 @@ _____| ||   _   ||       | |     | |       || | |   |
 
 const getRandomColor = () => {
   const colors = [
-    "#4CAF50", // Green
-    "#8BC34A", // Lime Green
-    "#00BCD4", // Cyan
-    "#FF5722", // Deep Orange
-    "#795548"  // Brown
+    "#2ecc71", // Green
+    "#27ae60", // Darker Green
+    "#52be80", // Lighter Green
+    "#239b56", // Another Green Shade
+    "#82e0aa"  // Pale Green
 ];
+
 
 
 
