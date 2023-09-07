@@ -32,12 +32,13 @@ _____| ||   _   ||       | |     | |       || | |   |
 
 const getRandomColor = () => {
   const colors = [
-    "#1f3a5a",   // Dark Blue
-    "#992d25",   // Dark Red
-    "#8c1c3a",   // Dark Magenta
-    "#4a3b5b",   // Dark Purple
-    "#c9831f",   // Dark Orange
+    "#4CAF50", // Green
+    "#8BC34A", // Lime Green
+    "#00BCD4", // Cyan
+    "#FF5722", // Deep Orange
+    "#795548"  // Brown
 ];
+
 
 
 
