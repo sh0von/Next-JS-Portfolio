@@ -31,7 +31,7 @@ _____| ||   _   ||       | |     | |       || | |   |
 );
 
 const getRandomColor = () => {
-  const darkColors = [
+  const colors = [
     "#1f3a5a",   // Dark Blue
     "#992d25",   // Dark Red
     "#8c1c3a",   // Dark Magenta
