@@ -32,12 +32,13 @@ _____| ||   _   ||       | |     | |       || | |   |
 
 const getRandomColor = () => {
   const colors = [
-    "#00FF00", // Green
-    "#2ecc71", // Light Green
-    "#27ae60", // Dark Green
-    "#7dcea0", // Pale Green
-    "#a9dfbf"  // Mint Green
+    "#2ecc71", // Green
+    "#3498db", // Ocean Blue
+    "#5DADE2", // Lighter Ocean Blue
+    "#48C9B0", // Turquoise
+    "#16A085", // Teal
 ];
+
 
 
 
