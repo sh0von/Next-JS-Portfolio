@@ -34,7 +34,6 @@ const getRandomColor = () => {
   const colors = [
     "#3498db",
     "#e74c3c",
-    "#6C757D",
     "#d64161",
     "#6b5b95",
     "#feb236",
