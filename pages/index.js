@@ -127,33 +127,44 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="mt-4 box ">
-        <div className="container scale-up">
-          <h2 className="section-heading">CTF Achievements</h2>
-          <div className="row">
-            {ctfAchievements.map((achievement, index) => (
-              <div className="col-md-4 mb-4" key={index}>
-                <div
-                  className="card ctf-card"
-                  style={{
-                    background: getRandomGradientColor(),
-                    color:"#fff"
-                  }}
-                >
-                  <div className="card-body">
-                    <div className="ctf-icon">
-                      <i className="fa fa-bug"></i>
-                    </div>
-                    <h3 className="card-title">{achievement.name}</h3>
-                    <p className="card-text">{achievement.position}</p>
-                    <p className="card-text">{achievement.date}</p>
-                  </div>
-                </div>
+
+      <section className="mt-4 box">
+  <div className="container scale-up">
+    <h2 className="section-heading">CTF Achievements</h2>
+    <div className="row">
+      {ctfAchievements.map((achievement, index) => (
+        <div className="col-md-4 mb-4" key={index}>
+          <div
+            className="card ctf-card" /* Ensure the card has the .ctf-card class */
+            style={{
+              background: getRandomGradientColor(),
+              color: "#fff",
+              position: "relative",
+              padding: "15px",
+              borderRadius: "10px",
+              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+            }}
+          >
+            {/* CTF Position Background */}
+            <div className="ctf-position-background">
+              {achievement.position}
+            </div>
+
+            <div className="card-body">
+              <div className="ctf-icon">
+                <i className="fa fa-bug"></i>
               </div>
-            ))}
+              <h3 className="card-title">{achievement.name}</h3>
+              <p className="card-text">{achievement.date}</p>
+            </div>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
+
 
       <section className="mt-4 box">
         <div className="container">

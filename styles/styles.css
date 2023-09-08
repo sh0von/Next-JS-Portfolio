@@ -138,7 +138,7 @@
   border-radius: 10px;
   padding: 20px;
   text-align: center;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 .ctf-card:hover {
@@ -167,4 +167,24 @@
   color: #bbb; 
   padding-top: 10px; 
   padding-bottom: 10px; 
+}
+/* Inside your CSS file */
+.ctf-position-background {
+  transform: rotate(-30deg) scale(1.2); /* Initial scale set to 1 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 10px;
+  background: #444;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 1;
+  border-bottom-left-radius: 10px;
+  transition: transform 0.2s ease; /* Add a transition for scaling */
+}
+
+/* Add a hover effect to scale up the position */
+.ctf-card:hover .ctf-position-background {
+  transform: rotate(-40deg) scale(1.3); /* Scale up on hover */
 }
