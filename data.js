@@ -48,13 +48,6 @@ const getRandomColor = () => {
     "#16A085", // Teal
 ];
 
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 6d9d202eed9ecacd37bf5883fbf31f0286c33427
 
   const randomIndex = Math.floor(Math.random() * colors.length);
   return colors[randomIndex];
