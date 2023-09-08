@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+
 import Layout from "../components/Layout";
 import {
   languages,
@@ -60,6 +61,13 @@ function Skill({ name, percentage }) {
 }
 
 function Home() {
+
+  const [displayedProjects, setDisplayedProjects] = useState(3);
+
+  const loadMoreProjects = () => {
+    // Increase the number of displayed projects by 6
+    setDisplayedProjects(displayedProjects + 3);
+  };
   return (
     <Layout>
       <section className="mt-4 fadein">
@@ -166,46 +174,58 @@ function Home() {
 
 
 
-      <section className="mt-4 box">
-        <div className="container">
+<section className="mt-4 box">
+        <div className="container scale-up">
           <h2 className="section-heading">My Project</h2>
-          <br></br>
+          <br />
           <div className="row masonary">
-          {projects.map((project, index) => (
-  <div className="col-md-4 mb-4 slide" key={index}>
-    <a href={project.link} className="a" target="_blank" rel="noopener noreferrer">
-      <div
-        className="card project-card"
-        style={{
-          background: getRandomGradientColor(),
-        }}
-      >
-        <div className="card-body">
-          <h5 className="card-title">
-            {project.title}
-            <span className="external-link-icon">
-              <i className="fa fa-link"></i>
-            </span>
-          </h5>
-          <p className="card-text">{project.description}</p>
+            {projects.slice(0, displayedProjects).map((project, index) => (
+              <div className="col-md-4 mb-4 slide" key={index}>
+                <a
+                  href={project.link}
+                  className="a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    className="card project-card"
+                    style={{
+                      background: getRandomGradientColor(),
+                    }}
+                  >
+                    <div className="card-body">
+                      <h5 className="card-title">
+                        {project.title}
+                        <span className="external-link-icon">
+                          <i className="fa fa-link"></i>
+                        </span>
+                      </h5>
+                      <p className="card-text">{project.description}</p>
 
-          {/* Check if the project has an image URL before rendering */}
-          {project.image && (
-            <img
-              src={project.image}
-              alt={project.title}
-              className="project-image"
-            />
-          )}
-        </div>
-      </div>
-    </a>
-  </div>
-))}
-
-
-
+                      {/* Check if the project has an image URL before rendering */}
+                      {project.image && (
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="project-image"
+                        />
+                      )}
+                    </div>
+                  </div>
+                </a>
+              </div>
+            ))}
           </div>
+          {displayedProjects < projects.length && (
+            <div className="text-center mt-4">
+              <button
+                className="load-more-button "
+                onClick={loadMoreProjects}
+              >
+                Load More <i className="fa fa-arrow-down"></i>
+              </button>
+            </div>
+          )}
         </div>
       </section>
       <section className="mt-4 ">

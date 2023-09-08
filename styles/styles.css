@@ -1,8 +1,8 @@
 
 :root {
     --heading-color: #d64161; 
-    --primary-color: #FF5733; 
-    --secondary-color: #FFC300; 
+    --primary-color: #2ecc71; 
+    --secondary-color: #48C9B0; 
     --accent-color: #FF33EC; 
     --bg-color: #2C3333; 
     --text-color: #FFFFFF; 
@@ -203,4 +203,25 @@
     filter: brightness(0.8); /* Darken the image on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
+}
+/* Add styles for the button */
+.load-more-button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Style the icon inside the button */
+.load-more-button i {
+  margin-left: 5px; /* Add space between text and icon */
+}
+
+/* Add a hover effect */
+.load-more-button:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05); /* Scale up on hover */
 }
