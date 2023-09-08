@@ -65,12 +65,13 @@ function Home() {
   const [displayedProjects, setDisplayedProjects] = useState(3);
 
   const loadMoreProjects = () => {
-    // Increase the number of displayed projects by 6
+   
     setDisplayedProjects(displayedProjects + 3);
   };
   return (
     <Layout>
-      <section className="mt-4 fadein">
+      
+      <section className="mt-4 bounce">
         <div className="container">
           <div className="row">
             <div className="col-md-12 ascii text-center">
@@ -79,6 +80,22 @@ function Home() {
           </div>
         </div>
       </section>
+      <section className="mt-4  bounce">
+  <div className="container">
+    <div className="row">
+      <div className="col-md-12">
+        <p className="description-text" style={{ textAlign: "center" }}>
+          <br />
+          I'm a passionate developer with a love for coding and a creative
+          mind. I enjoy working on projects that challenge me and push my
+          boundaries. When I'm not coding, you can find me exploring new
+          technologies or working on personal projects.
+        </p><br></br>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <section className="mt-4 box bounce">
         <div className="container">
@@ -143,7 +160,7 @@ function Home() {
       {ctfAchievements.map((achievement, index) => (
         <div className="col-md-4 mb-4" key={index}>
           <div
-            className="card ctf-card" /* Ensure the card has the .ctf-card class */
+            className="card ctf-card" 
             style={{
               background: getRandomGradientColor(),
               color: "#fff",
@@ -153,7 +170,7 @@ function Home() {
               boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
             }}
           >
-            {/* CTF Position Background */}
+            {}
             <div className="ctf-position-background">
               {achievement.position}
             </div>
@@ -180,40 +197,42 @@ function Home() {
           <br />
           <div className="row masonary">
             {projects.slice(0, displayedProjects).map((project, index) => (
-              <div className="col-md-4 mb-4 slide" key={index}>
-                <a
-                  href={project.link}
-                  className="a"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div
-                    className="card project-card"
-                    style={{
-                      background: getRandomGradientColor(),
-                    }}
-                  >
-                    <div className="card-body">
-                      <h5 className="card-title">
-                        {project.title}
-                        <span className="external-link-icon">
-                          <i className="fa fa-link"></i>
-                        </span>
-                      </h5>
-                      <p className="card-text">{project.description}</p>
-
-                      {/* Check if the project has an image URL before rendering */}
-                      {project.image && (
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className="project-image"
-                        />
-                      )}
-                    </div>
-                  </div>
-                </a>
-              </div>
+       <div className="col-md-4 mb-4 slide" key={index}>
+       <a
+         href={project.link}
+         className="a"
+         target="_blank"
+         rel="noopener noreferrer"
+       >
+         <div
+           className="card project-card"
+           style={{
+             background: getRandomGradientColor(),
+           }}
+         >
+           <div className="overlay"></div> {}
+           <div className="card-body">
+             <h5 className="card-title">
+               {project.title}
+               <span className="external-link-icon">
+                 <i className="fa fa-link"></i>
+               </span>
+             </h5>
+             <p className="card-text">{project.description}</p>
+     
+             {}
+             {project.image && (
+               <img
+                 src={project.image}
+                 alt={project.title}
+                 className="project-image"
+               />
+             )}
+           </div>
+         </div>
+       </a>
+     </div>
+     
             ))}
           </div>
           {displayedProjects < projects.length && (
