@@ -5,15 +5,24 @@ const languages = [
   { name: "PHP", proficiency: "Advanced" },
   { name: "HTML", proficiency: "Advanced" },
   { name: "CSS", proficiency: "Advanced" },
+  { name: "SQL", proficiency: "Intermediate" },
 ];
-
+const framework = [
+  { name: "Django", proficiency: "Advanced" },
+  { name: "Flask", proficiency: "Advanced" },
+  { name: "Next JS", proficiency: "Intermediate" },
+  { name: "Bootsrap", proficiency: "Advanced" },
+  { name: "Bulma", proficiency: "Advanced" },
+];
 
 const skills = [
     { name: "Web Development", percentage: 80 },
     { name: "Penetration Testing", percentage: 70 },
+    { name: "Wordpress", percentage: 90 },
     { name: "Competitive Programming", percentage: 30 },
-    { name: "Math Olympiad", percentage: 74 },
+    { name: "Git", percentage: 80 },
   ];
+
 const email = "minar@duck.com";
 const asciiArt = (
   <pre>
@@ -32,13 +41,13 @@ _____| ||   _   ||       | |     | |       || | |   |
 
 const getRandomColor = () => {
   const colors = [
-    "#3498db",
-    "#e74c3c",
-    "#6C757D",
-    "#d64161",
-    "#6b5b95",
-    "#feb236",
-  ];
+    "#2ecc71", // Green
+    "#3498db", // Ocean Blue
+    "#5DADE2", // Lighter Ocean Blue
+    "#48C9B0", // Turquoise
+    "#16A085", // Teal
+];
+
 
   const randomIndex = Math.floor(Math.random() * colors.length);
   return colors[randomIndex];
@@ -138,4 +147,4 @@ const socialMedia = [
  
 ];
 
-export { languages, skills, email, projects, asciiArt, getRandomColor,ctfAchievements ,socialMedia,getRandomGradientColor};
+export {framework, languages, skills, email, projects, asciiArt, getRandomColor,ctfAchievements ,socialMedia,getRandomGradientColor};

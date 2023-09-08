@@ -4,7 +4,7 @@
     --primary-color: #FF5733; 
     --secondary-color: #FFC300; 
     --accent-color: #FF33EC; 
-    --bg-color: #1C1C1C; 
+    --bg-color: #2C3333; 
     --text-color: #FFFFFF; 
     --card-bg-color: #333333; 
     --card-text-color: #FFFFFF; 
@@ -38,12 +38,12 @@
   .project-card .card-text {
     color: var(--card-text-color);
   }
-  
   .project-card {
     background-color: var(--card-bg-color); 
     color: var(--card-text-color); 
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
+    transition: transform 0.3s, box-shadow 0.3s; /* You can adjust the values as needed */
+}
+
   
   .project-card:hover {
     transform: translateY(-5px);

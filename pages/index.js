@@ -7,6 +7,7 @@ import {
   email,
   projects,
   getRandomColor,
+  framework,
   ctfAchievements,
   socialMedia,
   getRandomGradientColor,
@@ -99,7 +100,29 @@ function Home() {
                     {language.name} - {language.proficiency}
                   </span>
                 ))}
+              </div><br></br>
+              <div className=" ">
+              <h2 className="section-heading">Framework</h2>
+              <div className="d-flex flex-wrap">
+                {framework.map((framework, index) => (
+                  <span
+                    key={index}
+                    className="custom-tag"
+                    style={{
+                      background: getRandomGradientColor(),
+                      marginBottom: "5px",
+                    }}
+                  >
+                    {framework.name} - {framework.proficiency}
+                  </span>
+                ))}
               </div>
+
+
+              
+            </div>
+
+
             </div>
           </div>
         </div>
