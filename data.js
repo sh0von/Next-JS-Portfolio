@@ -68,12 +68,14 @@ const projects = [
     description:
       "A minimal portfolio template, developed using Next.js",
     link: "http://sh0von.me/",
+    image: "https://cdn.pixabay.com/photo/2016/11/30/20/58/programming-1873854_1280.png", 
   },
   {
     title: "Daily Sparks",
     description:
       "A web app which show unique idea in daily basis , develped using Next.js",
     link: "https://github.com/sh0von/dailysparks",
+    image: "https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg",
   },
   {
     title: "WRE Materials (CUET)",

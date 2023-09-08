@@ -172,7 +172,7 @@ function Home() {
           <br></br>
           <div className="row masonary">
           {projects.map((project, index) => (
-  <div className="col-md-4 mb-4 slide " key={index}>
+  <div className="col-md-4 mb-4 slide" key={index}>
     <a href={project.link} className="a" target="_blank" rel="noopener noreferrer">
       <div
         className="card project-card"
@@ -184,15 +184,26 @@ function Home() {
           <h5 className="card-title">
             {project.title}
             <span className="external-link-icon">
-              <i className="fa fa-link" ></i>
+              <i className="fa fa-link"></i>
             </span>
           </h5>
           <p className="card-text">{project.description}</p>
+
+          {/* Check if the project has an image URL before rendering */}
+          {project.image && (
+            <img
+              src={project.image}
+              alt={project.title}
+              className="project-image"
+            />
+          )}
         </div>
       </div>
     </a>
   </div>
 ))}
+
+
 
           </div>
         </div>

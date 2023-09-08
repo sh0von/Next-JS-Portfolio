@@ -188,3 +188,19 @@
 .ctf-card:hover .ctf-position-background {
   transform: rotate(-40deg) scale(1.3); /* Scale up on hover */
 }
+.project-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Update transition properties */
+
+  /* New hover effect: Slightly darken the image and scale up */
+  &:hover {
+    transform: scale(1);
+    filter: brightness(0.8); /* Darken the image on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+}
