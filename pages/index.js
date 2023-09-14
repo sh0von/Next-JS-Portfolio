@@ -69,14 +69,16 @@ function Home() {
   };
   return (
     <Layout>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7Q9W5EGHMG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7Q9W5EGHMG');
-</script>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-7Q9W5EGHMG" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-7Q9W5EGHMG');
+        `}
+      </Script>
       <section className="mt-4 bounce">
         <div className="container">
           <div className="row">
