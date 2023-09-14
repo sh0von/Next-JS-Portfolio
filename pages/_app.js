@@ -1,9 +1,10 @@
-// app.js
+import "@/styles/globals.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "font-awesome/css/font-awesome.css";
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import ReactGA from 'react-ga';
+import "../styles/styles.css";
 
+import "../styles/animation.css";
 // Initialize Google Analytics with your Measurement ID
 ReactGA.initialize('G-7Q9W5EGHMG', {
   debug: process.env.NODE_ENV === 'development', // Enable debug mode in development
