@@ -13,7 +13,8 @@ import {
   socialMedia,
   getRandomGradientColor,
 } from "../data";
-
+import Script from 'next/script'
+ 
 function Skill({ name, percentage }) {
   const skillStyle = {
     padding: "5px",
@@ -68,6 +69,14 @@ function Home() {
   };
   return (
     <Layout>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7Q9W5EGHMG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7Q9W5EGHMG');
+</script>
       <section className="mt-4 bounce">
         <div className="container">
           <div className="row">
