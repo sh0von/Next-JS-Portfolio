@@ -69,14 +69,14 @@ function Home() {
   };
   return (
     <Layout>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-S04S8V0MHZ" />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-VN5ZLL34XV" />
       <Script id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
  
-          gtag('config', 'G-S04S8V0MHZ');
+          gtag('config', 'G-VN5ZLL34XV');
         `}
       </Script>
       <section className="mt-4 bounce">
