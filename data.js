@@ -120,6 +120,10 @@ const ctfAchievements = [
     position: "70 th",
   },
   {
+    name: "Flag Hunt",
+    position: "123 th",
+  },
+  {
     name: "KingSquad CTF 2023",
     position: "374 th",
   },
